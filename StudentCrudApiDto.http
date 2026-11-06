@@ -1,0 +1,35 @@
+@StudentCrudApi_HostAddress = http://localhost:5235
+
+### Get all students
+GET {{StudentCrudApi_HostAddress}}/api/Student
+Accept: application/json
+
+### Get student by ID
+GET {{StudentCrudApi_HostAddress}}/api/Students/1
+Accept: application/json
+
+### Create student
+POST {{StudentCrudApi_HostAddress}}/api/Students
+Content-Type: application/json
+
+{
+  "name": "Menard Adriano",
+  "section": "1-7",
+  "age": 20,
+  "course": "BSP"
+}
+
+### Update student
+PUT {{StudentCrudApi_HostAddress}}/api/Students/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Menard Adriano",
+  "section": "1-7",
+  "age": 20,
+  "course": "BSP"
+}
+
+### Delete student
+DELETE {{StudentCrudApi_HostAddress}}/api/Students/16
